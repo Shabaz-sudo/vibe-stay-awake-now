@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
 
-## Project info
+# CursorVibe
 
-**URL**: https://lovable.dev/projects/63b8ddf8-4c88-497d-aa51-4387d606c895
+CursorVibe is a Python desktop application for Windows that prevents the system from going to sleep or locking due to inactivity by simulating small mouse movements.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Simulated mouse movement to keep the system active
+- Configurable movement frequency (0.1-2.0 seconds)
+- Configurable movement distance (1-10 pixels)
+- Activity detection (only moves the cursor when user is idle)
+- Toggle on/off functionality
+- Run on startup option
+- System tray integration
 
-**Use Lovable**
+## Requirements
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/63b8ddf8-4c88-497d-aa51-4387d606c895) and start prompting.
+- Python 3.6 or higher
+- PyQt5
+- pyautogui
 
-Changes made via Lovable will be committed automatically to this repo.
+## Installation
 
-**Use your preferred IDE**
+1. Clone or download this repository
+2. Install the required packages:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+pip install -r requirements.txt
 ```
 
-**Edit a file directly in GitHub**
+## Usage
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Run the application:
 
-**Use GitHub Codespaces**
+```
+python cursor_vibe.py
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The application will open with the main settings window. You can:
 
-## What technologies are used for this project?
+- Adjust the frequency of simulated mouse movements
+- Adjust the distance of simulated mouse movements
+- Set the idle threshold before movements begin
+- Enable/disable "Run on startup"
+- Click "Go, Mouse, Go!" to start the simulation
 
-This project is built with:
+When minimized, the application runs in the system tray. Right-click the tray icon to:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Start/Stop the simulation
+- Show the settings window
+- Quit the application
 
-## How can I deploy this project?
+## Note
 
-Simply open [Lovable](https://lovable.dev/projects/63b8ddf8-4c88-497d-aa51-4387d606c895) and click on Share -> Publish.
+This application uses the Windows registry to manage the "Run on startup" feature, which requires appropriate permissions.
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
