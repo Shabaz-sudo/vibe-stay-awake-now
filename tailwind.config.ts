@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom CursorVibe colors
+				cv: {
+					primary: '#0ACDFF',
+					secondary: '#F0F2F5',
+					accent: '#0078D7',
+					success: '#28A745',
+					warning: '#FFC107',
+					danger: '#DC3545',
+					gray: {
+						100: '#F8F9FA',
+						200: '#E9ECEF',
+						300: '#DEE2E6',
+						400: '#CED4DA',
+						500: '#ADB5BD',
+						600: '#6C757D',
+						700: '#495057',
+						800: '#343A40',
+						900: '#212529',
+					}
 				}
 			},
 			borderRadius: {
@@ -84,11 +105,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'cursor-move': {
+					'0%': { transform: 'translate(0px, 0px)' },
+					'20%': { transform: 'translate(2px, 2px)' },
+					'40%': { transform: 'translate(0px, 3px)' },
+					'60%': { transform: 'translate(-2px, 1px)' },
+					'80%': { transform: 'translate(-1px, -1px)' },
+					'100%': { transform: 'translate(0px, 0px)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'cursor-move': 'cursor-move 2s ease-in-out infinite'
 			}
 		}
 	},
